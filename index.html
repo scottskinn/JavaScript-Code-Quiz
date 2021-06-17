@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+    <div class="container"> 
+      <!-- Start quiz button -->
+        <div id="start">Start Quiz</div>
+
+    <!-- Rules of the Quiz -->
+        <div id="rules">
+            <h2>Rules</h2>
+            <h4>1. Once you click Start the timer will start the count down.</h4>
+            <h4>2. If you get a question wrong, time will be subtracted from the clock.</h4>
+            <h4>3. Once you select an answer, it can't be undone.</h4>
+            <h4>4. You can't exit the quiz once started.</h4>
+
+        </div>
+
+    </div>
+
+
+    <div id="quiz">
+        <div id="quiz-header">
+            <h5>JavaScript Quiz</h5>
+            <div id="timer">
+                <h6>Timer</h6>
+                <h6 id="time">75</h6>
+            </div>
+        </div>
+    
+
+        <!-- Quiz Questions -->
+
+        <div id="question">
+            <h2 id="questionNo">#1. </h2>
+            <h2 id="questionText">Which one is <strong>NOT</strong> a type of Pop up box available in JavaScript?</h2>
+        </div>
+
+        <!-- Quiz choices -->
+
+        <div id="optionList">
+            <h4 class="choice-que" id="option1">Alert</h4>
+            <h4 class="choice-que" id="option2">Prompt</h4>
+            <h4 class="choice-que" id="option3">Check Me</h4>
+            <h4 class="choice-que" id="option4">Comfirm</h4>
+        </div>
+
+        
+
+    </div>
+
+    </div>  
+    <script src="./assets/script.js"></script>
+</body>
+</html>
