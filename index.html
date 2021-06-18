@@ -7,6 +7,7 @@
     <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
+<header>Coding Quiz Challenge</header>
 <body>
     <div class="container"> 
       <!-- Start quiz button -->
@@ -30,7 +31,7 @@
             <h5>JavaScript Quiz</h5>
             <div id="timer">
                 <h6>Timer</h6>
-                <h6 id="time">75</h6>
+                <h6 id="time"></h6>
             </div>
         </div>
     
@@ -38,24 +39,27 @@
         <!-- Quiz Questions -->
 
         <div id="question">
-            <h2 id="questionNo">#1. </h2>
-            <h2 id="questionText">Which one is <strong>NOT</strong> a type of Pop up box available in JavaScript?</h2>
+            <h2 id="questionNo"></h2>
+            <h2 id="questionText"></h2>
         </div>
 
         <!-- Quiz choices -->
 
         <div id="optionList">
-            <h4 class="choice-que" id="option1">Alert</h4>
-            <h4 class="choice-que" id="option2">Prompt</h4>
-            <h4 class="choice-que" id="option3">Check Me</h4>
-            <h4 class="choice-que" id="option4">Comfirm</h4>
+            <button id="next_question"><h4 class="choice_que" id="option1"></h4></button>
+            <button id="next_question"><h4 class="choice_que" id="option2"></h4></button>
+            <button id="next_question"><h4 class="choice_que" id="option3"></h4></button>
+            <button id="next_question"><h4 class="choice_que" id="option4"></h4></button>
         </div>
 
         
 
     </div>
 
-    </div>  
+    </div> 
+     
+    <script src="./assets/questions.js"></script>
     <script src="./assets/script.js"></script>
+    
 </body>
 </html>
