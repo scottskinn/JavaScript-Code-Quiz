@@ -6,7 +6,7 @@ let guide = document.querySelector("#guide")
 
 // quiz section
 let quiz= document.querySelector("#quiz")
-let time = document.querySelector("time")
+let time = document.querySelector("#time")
 
 // question section
 let questionNo = document.querySelector("#questionNo")
@@ -29,6 +29,7 @@ var i = 0;
 let index = 0;
 let timer = 25;
 let interval = 0;
+// let time = 0;
 
 let correct = 0;
 let answer = 0;
@@ -41,7 +42,7 @@ start.addEventListener('click', ()=> {
     quiz.style.display = "block";
 
     // timer start
-    time = 0;
+    
     interval = setInterval(countDown, 1000);
     loadData();
 })
@@ -54,7 +55,7 @@ let countDown = ()=>{
     else {
     timer--;
     time.innerText = timer;
-    console.log(timer);
+    // console.log(timer);
     }
 }
 
@@ -62,12 +63,16 @@ let countDown = ()=>{
 
 let loadData = ()=>{
     questionNo.innerText = index + 1 + ". ";
-    questionText.innerText = MYQS[index].question;
-    option1.innerText = MYQS[index].choice1;
-    option2.innerText = MYQS[index].choice2;
-    option3.innerText = MYQS[index].choice3;
-    option4.innerText = MYQS[index].choice4;
+    questionText.innerText = MYQS[index].question;    
+
+    option1.innerText = MYQS[index].choices[0];
+    option2.innerText = MYQS[index].choices[1];
+    option3.innerText = MYQS[index].choices[2];
+    option4.innerText = MYQS[index].choices[3];
+
 }
+//listen for when choice button is clicked
+//
 
 loadData();
 
@@ -75,7 +80,7 @@ choice_que.forEach( (choices, choiceNo) =>{
     choices.addEventListener("click", ()=>{
         choices.classList.add("active");
 
-        if(choiceNo === MYQS[index].answer)
+        if(choices === MYQS[index].answer)
         {
             correct++;
         } else {
@@ -83,7 +88,7 @@ choice_que.forEach( (choices, choiceNo) =>{
         }
         // disable all other options
         for(i = 0; i <= 3; i++) {
-            choice_que[i].classList.add("disbled")
+            choice_que[i].classList.add("disabled")
         }
 
     })
@@ -91,22 +96,22 @@ choice_que.forEach( (choices, choiceNo) =>{
 
 next_question.addEventListener("click", ()=> {
     // go to next question
-    if(index !== MYQS.lenght - 1) {
+    if(index !== MYQS.length - 1) {
         index++;
     }
-    var answerText = event.target.textContent
-    if(answerText === question[i].answer) {
-        timer = timer;
-    } else {
-        timer = timer - 15;
-    }
+    // var answerText = document.getElementsById(MYQS[i].answer).textContent
+    // if(answerText === question[i].answer) {
+    //     timer = timer;
+    // } else {
+    //     timer = timer - 15;
+    // }
 
-    event.addEventListener("click", next_question)
+    // event.addEventListener("click", next_question)
 
 
-    // choice_que.addEventListener("click", ()=>{
-    //     removeActive.classList.remove("active");
-// })
+    choice_que.addEventListener("click", ()=>{
+        removeActive.classList.remove("active");
+})
     loadData();
 })
 

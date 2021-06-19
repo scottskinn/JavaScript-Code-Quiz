@@ -1,42 +1,29 @@
 // let answer = document.querySelector("MYQS", answer)
 let MYQS = [{
     question: "Which one is NOT a type of Pop up box available in JavaScript?",
-choice1:"Alert",
-choice2:"Prompt" ,
-choice3:"Check-Me" ,
-choice4:"Comfirm" ,
-answer: 3
+    choices: ["Alert", "Prompt", "Check-Me", "Confirm"],
+    answer: 2
 },
 {
     question: "______ tag is an extension to HTML that can enclose any number of JavaScript statements.",
-choice1: "SCRIPT",
-choice2: "BODY",
-choice3: "HEAD",
-choice4: "TITLE",
-answer: 1
+    choices: ["SCRIPT", "BODY", "HEAD", "TITLE"],
+    answer: 1
 },
 {
     question: "Which of the following is not considered a JavaScript operator?",
-choice1: "new",
-choice2: "this",
-choice3: "typeof",
-choice4: "delete",
-answer: 2
+    choices: ["new", "this", "typeof","delete"],
+    answer: 2
 },
 
 {    
     question: "In JavaScript, Window.prompt() method return true or false value ?" ,
-choice1: "true",
-choice2: "false",
-answer: 1
+    choices: ["true", "false"],
+    answer: 1
 },
 {
     question: "The function and var are known as:",
-choice1: "Keywords",
-choice2: "Data types",
-choice3: "Declaration statements",
-choice4: "Prototypes",
-answer: 3
+    choices: ["Keywords", "Data types", "Declaration statements", "Prototypes"],
+    answer: 3
 }]
 
 
